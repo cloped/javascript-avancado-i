@@ -1,11 +1,8 @@
 import DataHelper from '../helpers/DateHelper';
+import View from './View';
 
-class NegociacoesView {
-  constructor(element) {
-    this._element = element;
-  }
-
-  _template(model) {
+class NegociacoesView extends View {
+  template(model) {
     /* eslint-disable indent */
     return `
       <table class="table table-hover table-bordered">
@@ -39,10 +36,6 @@ class NegociacoesView {
       </tfoot>
       </table>`;
     /* eslint-enable indent */
-  }
-
-  update(model) {
-    this._element.innerHTML = this._template(model);
   }
 }
 
