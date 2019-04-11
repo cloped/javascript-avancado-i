@@ -1,6 +1,8 @@
 class ListaNegociacoes {
-  constructor() {
+  constructor(trigger) {
     this._negociacoes = [];
+
+    this._trigger = trigger;
   }
 
   get negociacoes() {
@@ -9,10 +11,14 @@ class ListaNegociacoes {
 
   adiciona(negociacao) {
     this._negociacoes.push(negociacao);
+
+    this._trigger(this);
   }
 
   esvazia() {
     this._negociacoes = [];
+
+    this._trigger(this);
   }
 }
 
