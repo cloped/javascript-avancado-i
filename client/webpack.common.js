@@ -31,7 +31,7 @@ module.exports = {
   optimization: {
     providedExports: true,
     usedExports: true,
-    concatenateModules: true
+    concatenateModules: true,
   },
 
   plugins: [
@@ -43,7 +43,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       hash: true,
       filename: 'index.html',
-      template: './main/index.html',
+      template: './layout/index.html',
       chunks: ['app'],
       minify: {},
     }),
