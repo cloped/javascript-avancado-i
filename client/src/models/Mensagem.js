@@ -1,8 +1,6 @@
 class Mensagem {
-  constructor(texto, trigger) {
+  constructor(texto) {
     this._texto = texto || '';
-
-    this._trigger = trigger;
   }
 
   get texto() {
@@ -11,10 +9,6 @@ class Mensagem {
 
   set texto(texto) {
     this._texto = texto;
-
-    if (texto !== '') {
-      this._trigger(this);
-    }
   }
 }
 

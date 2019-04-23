@@ -4,7 +4,11 @@ class ListaNegociacoes {
   }
 
   get negociacoes() {
-    return [].concat(this._negociacoes);
+    return this._negociacoes;
+  }
+
+  get volumeTotal() {
+    return this._negociacoes.reduce((total, n) => total + n.volume, 0.0);
   }
 
   adiciona(negociacao) {
